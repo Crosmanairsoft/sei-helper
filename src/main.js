@@ -134,7 +134,7 @@ const parseWinCmdLineParam = (p) => {
 
 const cleanupFilename = (flnm) => {
     const fixingChar = '_';
-    const illegalRe = /[\/\?<>\\:\*\|":]/g; // Illegal Characters on conscious Operating Systems: / ? < > \ : * | "
+    const illegalRe = /[\/\?<>\\:\*\|"\':]/g; // Illegal Characters on conscious Operating Systems: / ? < > \ : * | "
     const controlRe = /[\x00-\x1f\x80-\x9f]/g; // Unicode Control codes: C0 0x00-0x1f & C1 (0x80-0x9f)
     const reservedRe = /^\.+$/; // Reserved filenames on Unix-based systems (".", "..")
     const windowsReservedRe = /^(con|prn|aux|nul|com[0-9]|lpt[0-9])(\..*)?$/i;
